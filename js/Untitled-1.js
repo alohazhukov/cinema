@@ -1,28 +1,28 @@
 "use strict";
 
-const str = "teSt";
+let str = "some";
+let strObj = new String(str);
 
-// console.log(str[2] = 'd');
+// console.log(typeof(str));
+// console.log(typeof(strObj));
 
-// console.log(str.toUpperCase());
-console.log(str.toLowerCase());
-console.log(str);
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function() {
+        console.log("hello!")
+    }
+};
 
-const fruit = "Some fruit";
+const john = Object.create(soldier);
 
-console.log(fruit.indexOf("q"));
+// const john = {
+//     health: 100
+// };
 
-const logg = "Hello world";
+// john.__proto__ = soldier;
 
-// console.log(logg.slice(6, 11));
+// Object.setPrototypeOf(john, soldier);
 
-// console.log(logg.substring(6, 11));
-
-console.log(logg.substr(6, 5));
-
-const num = 12.2;
-console.log(Math.round(num)); 
-
-const test = "12.2px";
-// console.log(parseInt(test));
-console.log(parseFloat(test));
+// console.log(john.armor);
+john.sayHello();
